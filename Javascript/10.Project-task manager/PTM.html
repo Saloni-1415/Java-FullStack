@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+
+    <link rel="stylesheet" href="PTM.css">
+    <script src="PTM.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Task Management System</h1>
+        <p>WELCOME TO TASK MANAGEMENT APP !!</p>
+
+        <hr>
+
+        <form id="taskForm">
+
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" placeholder="Enter task name" required>
+            <br><br>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate">
+            <br><br>
+
+            <label for="priority">Priority:</label>
+            <select id="priority">
+                <option value="High">High</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <br><br>
+
+            <button type="button" id="addTaskBtn">Add Task</button>
+
+        </form>
+
+        <hr>
+
+        <div class="filters">
+            <button type="button" id="allBtn">All</button>
+            <button type="button" id="pendingBtn">Pending</button>
+            <button type="button" id="completedBtn">Completed</button>
+        </div>
+
+        <hr>
+
+        <div class="task-stats">
+            <p>Total Tasks: <span id="totalCount">0</span></p>
+            <p>Pending Tasks: <span id="pendingCount">0</span></p>
+            <p>Completed Tasks: <span id="completedCount">0</span></p>
+        </div>
+
+        <hr>
+
+        <h3>Task List : </h3>
+        <ul id="taskList">
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
+
